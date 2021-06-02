@@ -1,5 +1,6 @@
 <!DOCTYPE html>
 <html xmlns:th="http://www.thymeleaf.org" xmlns:sec="http://www.thymeleaf.org/thymeleaf-extras-springsecurity4">
+
 <head>
     <title>Log in</title>
     <link rel="stylesheet" href="https://maxcdn.bootstrapcdn.com/bootstrap/3.3.7/css/bootstrap.min.css">
@@ -9,8 +10,11 @@
     <script src="https://maxcdn.bootstrapcdn.com/bootstrap/3.3.7/js/bootstrap.min.js"></script>
     <script src="/custom.js"></script>
 </head>
+
 <body>
 <div class="container">
+    <div th:replace="fragments/navbar"></div>
+
     <h2>Welcome!</h2>
     <form th:action="@{/login}" method="post"><br/>
         <input type="text" id="username" name="username" th:placeholder="Username" class="form-control"/> <br/>
@@ -22,4 +26,5 @@
     </form>
 </div>
 </body>
+
 </html>
